@@ -1,13 +1,30 @@
-swagger: '2.0'
+swagger: "2.0"
+
 info:
   title: notes-api
+  description: API Gateway for Daily Notes App
   version: 1.0.0
+
+schemes:
+  - https
 
 paths:
   /:
     get:
+      summary: Home page
+      operationId: getHome
       x-google-backend:
-        address: CLOUD_RUN_URL
+        address: https://notes-service-951277940270.us-central1.run.app
       responses:
         '200':
-          description: Success
+          description: Successful response
+
+  /add:
+    post:
+      summary: Add note
+      operationId: addNote
+      x-google-backend:
+        address: https://notes-service-951277940270.us-central1.run.app
+      responses:
+        '200':
+          description: Note added successfully
