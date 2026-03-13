@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Daily Notes</title>
+</head>
+<body>
+
+<h2>My Daily Notes</h2>
+
+<form action="/add" method="POST">
+<input type="text" name="note" placeholder="Enter your note">
+<button type="submit">Save</button>
+</form>
+
+<h3>Saved Notes</h3>
+<ul>
+{% for note in notes %}
+<li>{{ note.note }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
