@@ -18,5 +18,5 @@ steps:
   - --platform
   - managed
   - --allow-unauthenticated
-options:                                                                │
+options:
   logging: CLOUD_LOGGING_ONLY
